@@ -6,11 +6,11 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-  res.render('index', { message: 'Olá, Mundo:)' });
+  res.render('index', { message: 'Bem Vindo(a) á Darck Book' });
 });
 
 app.get('/produtos', (req, res) => {
-  res.render('produtos', { message: 'Olá, mundinho' });
+  res.render('produtos', { message: 'Darck Book' });
 });
 
 app.listen(port, () => {

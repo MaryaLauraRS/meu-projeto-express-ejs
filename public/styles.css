@@ -1,5 +1,8 @@
-html{
-	font-family: Courier, serif;
-    font-style:italic;
-    font-size:20px;
-	}
+#mais{
+    display: none;
+}
+
+#card{
+
+        margin: 0 auto;
+}
