@@ -5,9 +5,6 @@ const port = 3000;
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
-app.get('/', (req, res) => {
-  res.render('index', { message: 'Bem Vindo(a) á Darck Book' });
-});
 
 const produtos = [
   { id: 1, image: "https://m.media-amazon.com/images/I/61FTkkWMA9L._SY342_.jpg", nome: "Corrupt (devil's Night Livro 1)", descricao:"Nós esperamos. Fomos pacientes. E agora... cada um de seus pesadelos se tornaria realidade.", preco: 68.04, altor:"Edição Português | por Penelope Douglas"  },
@@ -39,6 +36,15 @@ const produtos = [
 
   { id: 10, image: "", nome: "", descricao:"", preco: "", altor:""  },
 ];
+
+function buscarProdutoPorID(id){
+    const produto = produtos.find(produto => produto.id == id);
+    return produto || null
+   }
+   
+app.get('/', (req, res) => {
+  res.render('index', {produtos});
+});
 
 app.get('/produtos', (req, res) => {
   res.render('produtos', { message: 'Darck Book' });
