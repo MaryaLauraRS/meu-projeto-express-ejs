@@ -18,8 +18,8 @@
       <div class="card-body">
         <h5 class="card-title"> <%= produto.nome %></h5><br/>
         <p class="card-text text-break"><%= produto.descricao %></p>
-        <p class="fw-bold fs-5">R$:<%= produto.preco %></p>
-        <a class="text-secondary" href="/produtos">ver Livro</a>
+        <p class="fw-bold fs-5">R$<%= produto.preco %></p>
+        <a class="text-secondary" href="/produtos/<%= produto.id %>">ver Livro</a>
         <p class="card-text"><small class="text-muted"><%= produto.altor %></small></p>
       </div>
     </div> <% } %>
